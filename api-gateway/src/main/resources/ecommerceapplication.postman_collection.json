@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "93924ef1-938a-4587-b0bb-5540ebd0c198",
+		"name": "ecommerceapplication",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32713157"
+	},
+	"item": [
+		{
+			"name": "order-service",
+			"item": [
+				{
+					"name": "Create Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"orderLineItemsDtoList\": [\r\n        {\r\n            \"skuCode\": \"iphone13\",\r\n            \"unitPrice\": 75000,\r\n            \"quantity\": 1\r\n        },\r\n        {\r\n            \"skuCode\": \"iphone13_pro\",\r\n            \"unitPrice\": 83000,\r\n            \"quantity\": 1\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"order"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "product-service",
+			"item": [
+				{
+					"name": "createProduct",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getProduct",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"product"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "inventory-service",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/api/inventory?skuCode=iphone13&skuCode=iphone13_pro",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"inventory"
+							],
+							"query": [
+								{
+									"key": "skuCode",
+									"value": "iphone13"
+								},
+								{
+									"key": "skuCode",
+									"value": "iphone13_pro"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "api-gateway",
+			"item": [
+				{
+					"name": "get-product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"product"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
