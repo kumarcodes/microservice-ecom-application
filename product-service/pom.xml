@@ -7,6 +7,7 @@
         <groupId>org.ecommerce</groupId>
         <artifactId>microservice-ecom-app</artifactId>
         <version>1.0-SNAPSHOT</version>
+<!--        rohit -->
     </parent>
 
     <artifactId>product-service</artifactId>
